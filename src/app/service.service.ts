@@ -6,11 +6,15 @@ import {HttpClient} from '@angular/common/http'
 })
 export class ServiceService {
 
-  private REST_API_SERVER = "http://localhost:3000/";
+  private REST_API_SERVER = "http://localhost:9003/";
 
   constructor(private httpclient : HttpClient) { }
 
-  public getProduct(nameEndPoint : String ){
+  public getAllProviders(nameEndPoint : String ){
+    return this.httpclient.get(this.REST_API_SERVER+nameEndPoint);
+      
+  }
+  public getAllProducts(nameEndPoint : String ){
     return this.httpclient.get(this.REST_API_SERVER+nameEndPoint);
       
   }

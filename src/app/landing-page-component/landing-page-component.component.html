@@ -1,11 +1,14 @@
-<div *ngIf="products.length ===0">
-    <p>
-        No hay nada
-    </p>
-</div>
+<div class="body">
+    <div *ngIf="providers.length ===0">
 
-<div *ngFor="let product of products">
-    <p>
-        {{product.id}} / {{product.name}} / {{product.price}}
-    </p>
+        <p>No hay nada</p>
+    </div>
+
+    <div *ngFor="let provider of providers">
+        <p>
+            {{provider.postalCode}} / {{provider.providerName}} / {{provider.address}} / {{provider.telephone}}
+        </p>
+    </div>
+
+    <button (click)="onClickMe"> Aceptar</button>
 </div>

@@ -9,16 +9,21 @@ import { ServiceService } from '../service.service';
 ///Clase principal del componente de la logica de negocios
 export class LandingPageComponentComponent implements OnInit {
 
-  products = [];
+  providers = [];
+  info = "no hay datos";
 
   constructor(private serviceService: ServiceService) { }
 
   ngOnInit(): void {
 
-    this.serviceService.getProduct("products/").subscribe((data : any[]) => {
+    this.serviceService.getAllProviders("getAllProvider/").subscribe((data : any[]) => {
       console.log(data);
-      this.products = data;
+      this.providers = data;
     });
+  }
+
+  onClickMe(){
+    this.info = "si hay datos"
   }
 
 }

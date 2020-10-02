@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component} from '@angular/core';
+import { DashboardComponent } from './dashboard/dashboard.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ProyectoAngular';
+
+  navIsShow : false;
+
+  verNav(showNav){
+    this.navIsShow = showNav;
+    console.log(showNav)
+  }
+
 }

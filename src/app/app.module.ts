@@ -7,14 +7,16 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import { LandingPageComponentComponent } from './landing-page-component/landing-page-component.component';
 import { LoginComponent } from './login/login.component';
-import { RegistrerComponent } from './registrer/registrer.component'
+import { RegistrerComponent } from './registrer/registrer.component';
+import { DashboardComponent } from './dashboard/dashboard.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponentComponent,
     LoginComponent,
-    RegistrerComponent
+    RegistrerComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

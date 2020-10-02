@@ -1,5 +1,8 @@
 import { style } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { AppComponent } from '../app.component';
+
+
 
 @Component({
   selector: 'app-login',
@@ -8,7 +11,9 @@ import { Component, OnInit } from '@angular/core';
   
 
 })
+
 export class LoginComponent implements OnInit {
+
 
   constructor() { }
 

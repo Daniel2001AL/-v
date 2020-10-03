@@ -9,6 +9,9 @@ import { LandingPageComponentComponent } from './landing-page-component/landing-
 import { LoginComponent } from './login/login.component';
 import { RegistrerComponent } from './registrer/registrer.component';
 import { DashboardComponent } from './dashboard/dashboard.component'
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireAuthModule } from "@angular/fire/auth";
+import { environment } from '../environments/environment.prod';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,8 @@ import { DashboardComponent } from './dashboard/dashboard.component'
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [],
   bootstrap: [AppComponent]

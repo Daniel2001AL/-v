@@ -1,5 +1,5 @@
 import { Component} from '@angular/core';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuthService } from './shared/auth.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,11 +8,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 export class AppComponent {
   title = 'ProyectoAngular';
 
-  navIsShow : false;
 
-  verNav(showNav){
-    this.navIsShow = showNav;
-    console.log(showNav)
-  }
 
 }

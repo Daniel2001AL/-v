@@ -1,5 +1,10 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import "firebase/auth";
+import "firebase/firestore";
+import { from } from 'rxjs';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +12,8 @@ import {HttpClient} from '@angular/common/http';
 export class ServiceService {
 
   private REST_API_SERVER = "http://localhost:9003/";
+
+
 
   constructor(private httpclient : HttpClient) {
   
@@ -20,5 +27,6 @@ export class ServiceService {
     return this.httpclient.get(this.REST_API_SERVER+nameEndPoint);
       
   }
-}
 
+
+}

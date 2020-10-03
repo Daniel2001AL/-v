@@ -106,3 +106,41 @@
     border-radius: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+.ingresarG {
+    text-align: center;
+    width: 250px;
+    height: 32px;
+    margin-left: 25px;
+}
+
+.btnG {
+    border-radius: 15px;
+    height: 35px;
+    border: 0ch;
+    padding-right: 15px;
+    background-color: rgb(167, 0, 0);
+    text-align: right;
+    font-size: 15px;
+}
+
+.google {
+    width: 13%;
+    height: 80%;
+    margin-right: 210px;
+    margin-bottom: -3px;
+}
+
+.btG {
+    text-align: center;
+    width: 250px;
+    height: 32px;
+    margin-left: 25px;
+    background-color: rgb(167, 0, 0);
+    font-size: 15px;
+    border-radius: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ffffff;
+    border: none;
+    margin-top: 20px;
+}

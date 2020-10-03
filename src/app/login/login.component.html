@@ -2,7 +2,6 @@
     <div class="login-box">
         <h1>LOGIN</h1>
         <form>
-
             <img src="https://vignette.wikia.nocookie.net/typemoon/images/b/be/Hechizos_de_Comando_de_Rin_Tohsaka.svg/revision/latest/scale-to-width-down/340?cb=20161023200430&path-prefix=es" alt="logo" class="logo">
             <!--USERNAME-->
             <label for="username"></label>
@@ -15,8 +14,9 @@
             <div class="ingresar">
                 <a routerLink="/dashboard" style="color: aliceblue;">INGRESAR</a>
             </div>
-            <div style="margin-top: -25px;">
-                <input type="submit" value="GOOGLE">
+
+            <div>
+                <button type="button" class="btG" (click)="loginGg()">CONTINUAR CON GOOGLE</button>
             </div>
 
             <div style="margin-top: 20px;">

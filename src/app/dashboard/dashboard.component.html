@@ -8,8 +8,8 @@
                 <a class="nav-link " id="v-pills-home-tab " data-toggle="pill " role="tab " aria-controls="v-pills-home " aria-selected="false ">Home</a>
                 <a class="nav-link " id="v-pills-profile-tab " data-toggle="pill " role="tab " aria-controls="v-pills-profile " aria-selected="false ">Profile</a>
                 <a class="nav-link active " style="background-color: rgb(143, 14, 14); " id="v-pills-messages-tab " data-toggle="pill " routerLink="/dashboard" role="tab " aria-controls="v-pills-messages " aria-selected="true ">Dashboard</a>
-                <a class="nav-link " id="v-pills-settings-tab " data-toggle="pill " routerLink="/login" role="tab " aria-controls="v-pills-settings " aria-selected="true ">LogOut</a>
-
+                <a type="button" class="nav-link " id="v-pills-settings-tab " data-toggle="pill " role="tab " aria-controls="v-pills-settings " aria-selected="true " (click)="logout()">LogOut</a>
+                <!-- routerLink="/login" -->
             </div>
         </div>
     </div>

@@ -1,20 +1,20 @@
 <div class="body">
     <div class="login-box">
         <h1>LOGIN</h1>
-        <form>
+        <form [formGroup]="loginFormGroup">
             <img src="https://vignette.wikia.nocookie.net/typemoon/images/b/be/Hechizos_de_Comando_de_Rin_Tohsaka.svg/revision/latest/scale-to-width-down/340?cb=20161023200430&path-prefix=es" alt="logo" class="logo">
             <!--USERNAME-->
             <label for="username"></label>
-            <input class="user" type="text" placeholder="User">
+            <input class="user" type="text" placeholder="User" formControlName="email">
 
             <!--PASSWORD-->
             <label for="password"></label>
-            <input class="password" type="password" placeholder="Password">
+            <input class="password" type="password" placeholder="Password" formControlName="password">
 
-            <div class="ingresar">
-                <a routerLink="/dashboard" style="color: aliceblue;">INGRESAR</a>
+            <div>
+                <button type="button" class="btG" [disabled]="loginFormGroup.invalid" style="color: aliceblue;" (click)="login()">INGRESAR</button>
             </div>
-
+            <!-- routerLink="/dashboard" -->
             <div>
                 <button type="button" class="btG" (click)="loginGg()">CONTINUAR CON GOOGLE</button>
             </div>

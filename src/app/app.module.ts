@@ -13,6 +13,8 @@ import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { environment } from '../environments/environment.prod';
 
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +28,8 @@ import { environment } from '../environments/environment.prod';
     AppRoutingModule,
     HttpClientModule,
     AngularFireAuthModule,
+    FormsModule, 
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [],

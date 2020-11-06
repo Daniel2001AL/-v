@@ -30,7 +30,7 @@ export class AuthServiceService {
     return this.http.post(`${this.api}api/v1/login/`, {username, password}, httpOptions); 
   }
 
-  getUser():Object{
+  getUser(){
     let user = JSON.parse(localStorage.getItem('user'));
     let token = user['token']
     const httpOptions={
@@ -51,10 +51,10 @@ export class AuthServiceService {
         'Authorization': 'Token '+token
       })
     };
-    return this.http.get(`${this.api}api/v1/profile/profileModelSpecific_url${id}`,httpOptions);
+    return this.http.get(`${this.api}api/v1/profile/profileModelSpecific_url  ${id}`,httpOptions);
   }
 
-  addUser(nombre: string, edad: string,correo: string):Observable<any>{
+  addUser(name: string, age: string,email: string):Observable<any>{
     let user = JSON.parse(localStorage.getItem('user'));
     let token = user['token']
     const httpOptions={
@@ -63,7 +63,7 @@ export class AuthServiceService {
         'Authorization': 'Token '+token
       })
     };
-    return this.http.post(`${this.api}api/v1/profile/profileModelGeneral_url`,{nombre,edad,correo},httpOptions);
+    return this.http.post(`${this.api}api/v1/profile/profileModelGeneral_url`,{name,age,email},httpOptions);
   }
 
   deleteUser(id: string):Observable<any>{
@@ -78,7 +78,7 @@ export class AuthServiceService {
     return this.http.delete(`${this.api}api/v1/profile/profileModelSpecific_url${id}`,httpOptions);
   }
 
-  updateUser(id: string, nombre_com: string, edad:string,correo:string):Observable<any>{
+  updateUser(id: string, name: string, age:string,email:string):Observable<any>{
     let user = JSON.parse(localStorage.getItem('user'));
     let token = user['token']
     const httpOptions={
@@ -87,7 +87,7 @@ export class AuthServiceService {
         'Authorization': 'Token '+token
       })
     };
-    return this.http.put(`${this.api}api/v1/profile/profileModelSpecific_url${id}`,{nombre_com,edad,correo},httpOptions);
+    return this.http.put(`${this.api}api/v1/profile/profileModelSpecific_url${id}`,{name,age,email},httpOptions);
   }
 }
 

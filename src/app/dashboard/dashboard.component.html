@@ -30,9 +30,9 @@
         </div>
     </div>
 
-    <div style="margin-right: 80px;" [formGroup]="addRegistro">
+    <div style="margin-right: 80px;">
         <div class="add">
-            <form class="form-add">
+            <form class="form-add" [formGroup]="addRegistro">
                 <label for="username"></label>
                 <input class="user" type="text" placeholder="User" formControlName="name">
 
@@ -43,7 +43,7 @@
                 <input type="email" id="email" placeholder="Email" formControlName="email">
             </form>
             <div style="margin-top: -45px; margin-left: 30px;">
-                <button type="button" class="btG-Add" style="color: aliceblue;">AGREGAR</button>
+                <button type="button" class="btG-Add" style="color: aliceblue;" (click)="addUser()">ADD</button>
             </div>
         </div>
 
@@ -63,8 +63,8 @@
                         <td>{{user.name}}</td>
                         <td>{{user.age}}</td>
                         <td>{{user.email}}</td>
-                        <td><button type="button" class="btG" style="color: aliceblue;">ELIMINAR</button></td>
-                        <td><button type="button" class="btG" style="color: aliceblue;">ACTUALIZAR</button></td>
+                        <td><button type="button" class="btG" style="color: aliceblue;" (click)="deleteUser(user.id)">DELETE</button></td>
+                        <td><button type="button" class="btG" style="color: aliceblue;" (click)="update(user.id)">UPDATE</button></td>
                     </tr>
                 </tbody>
             </table>

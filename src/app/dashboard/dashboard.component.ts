@@ -12,6 +12,10 @@ export class DashboardComponent implements OnInit {
 
   users = [];
   addRegistro : FormGroup;
+  name : string;
+  age: string;
+  email: string;
+  id: string;
 
   constructor(private _router : Router, private _authService : AuthServiceService, private _formBuilder:FormBuilder) {
     if(_authService.isAuthenticated() == false){
@@ -37,7 +41,8 @@ export class DashboardComponent implements OnInit {
     this._router.navigate(['/'])
   }
 
-  deleteProduct(id:string):void{
+  deleteUser(id:string):void{
+    console.log(id)
     this._authService.deleteUser(id).subscribe(access=>{
       console.log("Todo bien")
       window.location.reload();
@@ -46,15 +51,30 @@ export class DashboardComponent implements OnInit {
     })
   }
 
-  addProducto():void{
+  addUser():void{
     const data = this.addRegistro.value;
     if(data.name&& data.age && data.email){
-      this._authService.addUser(data.name,data.age,data.age).subscribe(access=>{
+      this._authService.addUser(data.name,data.age,data.email).subscribe(access=>{
         window.location.reload();
       },error=>{
         console.log("Datos inválidos")
       })
     }
+  }
+
+  update(id:string):void{
+    this._authService.getOneUser(id).subscribe((data:JSON)=>{
+      let registro = data;
+      this.name = registro['name']
+      this.age= registro['age']
+      this.email = registro['email']
+      this.addRegistro = this._formBuilder.group({
+        name: [this.name],
+        age: [this.age],
+        email: [this.email]
+    });
+   
+    })
   }
 
 

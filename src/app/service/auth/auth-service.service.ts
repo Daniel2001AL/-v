@@ -51,7 +51,7 @@ export class AuthServiceService {
         'Authorization': 'Token '+token
       })
     };
-    return this.http.get(`${this.api}api/v1/profile/profileModelSpecific_url  ${id}`,httpOptions);
+    return this.http.get(`${this.api}api/v1/profile/profileModelSpecific_url/${id}`,httpOptions);
   }
 
   addUser(name: string, age: string,email: string):Observable<any>{
@@ -75,7 +75,7 @@ export class AuthServiceService {
         'Authorization': 'Token '+token
       })
     };
-    return this.http.delete(`${this.api}api/v1/profile/profileModelSpecific_url${id}`,httpOptions);
+    return this.http.delete(`${this.api}api/v1/profile/profileModelSpecific_url/${id}`,httpOptions);
   }
 
   updateUser(id: string, name: string, age:string,email:string):Observable<any>{
@@ -87,7 +87,7 @@ export class AuthServiceService {
         'Authorization': 'Token '+token
       })
     };
-    return this.http.put(`${this.api}api/v1/profile/profileModelSpecific_url${id}`,{name,age,email},httpOptions);
+    return this.http.put(`${this.api}api/v1/profile/profileModelSpecific_url/${id}`,{name,age,email},httpOptions);
   }
 }
 

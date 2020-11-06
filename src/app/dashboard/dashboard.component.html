@@ -30,7 +30,23 @@
         </div>
     </div>
 
-    <div>
+    <div style="margin-right: 80px;">
+        <div class="add">
+            <form class="form-add">
+                <label for="username"></label>
+                <input class="user" type="text" placeholder="User">
+
+                <label for="Age"></label>
+                <input class="age" type="text" placeholder="Age">
+
+                <label for="email"></label>
+                <input type="email" id="email" placeholder="Email">
+            </form>
+            <div style="margin-top: -45px; margin-left: 30px;">
+                <button type="button" class="btG-Add" style="color: aliceblue;">AGREGAR</button>
+            </div>
+        </div>
+
         <div class="table-responsive">
             <table class="table table-striped table-dark">
                 <thead class="tbody">
@@ -38,6 +54,8 @@
                         <th scope="col" style="width: 200px;">Name</th>
                         <th scope="col">Age</th>
                         <th scope="col" style="width: 300px;">Email</th>
+                        <th scope="col" style="width: 130px;">Delete</th>
+                        <th scope="col" style="width: 130px;">Update</th>
                     </tr>
                 </thead>
                 <tbody class="tbody">
@@ -45,15 +63,13 @@
                         <td>Luis</td>
                         <td>20</td>
                         <td>example@mdo</td>
+                        <td><button type="button" class="btG" style="color: aliceblue;">ELIMINAR</button></td>
+                        <td><button type="button" class="btG" style="color: aliceblue;">ACTUALIZAR</button></td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <div style="margin-top: 15px; margin-left: 85px;">
-            <button type="button" class="btG" style="color: aliceblue;">AGREGAR</button>
-            <button type="button" class="btG" style="color: aliceblue;">ACTUALIZAR</button>
-            <button type="button" class="btG" style="color: aliceblue;">ELIMINAR</button>
-        </div>
+
     </div>
 
 </div>

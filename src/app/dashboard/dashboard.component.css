@@ -52,10 +52,36 @@
     align-items: center;
 }
 
+.form-add {
+    border: 0px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 0px;
+    height: 80px;
+    width: 400px;
+    align-items: center;
+}
+
 .form-group input[type="text"],
 .form-group input[type="email"] {
     width: 80%;
     margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    outline: none;
+    height: 30px;
+    font-size: 15px;
+    margin-left: 35px;
+    margin-top: 25px;
+}
+
+.form-add input[type="text"],
+.form-add input[type="email"] {
+    width: 20%;
+    margin-bottom: 0px;
     border: none;
     border-bottom: 2px solid #ffffff;
     background: transparent;
@@ -89,7 +115,7 @@ input[type="submit"] {
 }
 
 .table-responsive {
-    margin-top: 50px;
+    margin-top: 0px;
     margin-right: 50px;
     margin-left: 15px;
 }
@@ -106,13 +132,32 @@ input[type="submit"] {
 
 .btG {
     text-align: center;
-    width: 125px;
+    width: 100px;
     height: 32px;
-    margin-left: 25px;
+    margin-left: 0px;
     background-color: rgb(167, 0, 0);
     font-size: 15px;
     border-radius: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #ffffff;
     border: none;
+}
+
+.btG-Add {
+    text-align: center;
+    width: 100px;
+    height: 32px;
+    margin-left: 450px;
+    margin-top: 0px;
+    background-color: rgb(167, 0, 0);
+    font-size: 15px;
+    border-radius: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ffffff;
+    border: none;
+}
+
+.add {
+    height: 80px;
+    width: 500px;
 }
